@@ -1,10 +1,9 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import TodoViewSet, TestViewSet
+from .views import UserViewSet
 
 r = DefaultRouter()
-r.register("todo", TodoViewSet)
-r.register("test", TestViewSet)
+r.register("users", UserViewSet)
 
 urlpatterns = [
     path('', include(r.urls)),
